@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pokémon Battle Arena</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <!-- Pantalla de seleccion -->
+
+        <section id="picker-screen" class="screen">
+
+            <h1>POKEMON Battle Arena</h1>
+
+            <p>Selecciona dos Pokemon para comenzar la batalla.</p>
+
+            <div class="fighters-picker">
+
+                <!-- Pokemon 1 -->
+                <div class="picker-card">
+
+                    <h2>Pokemon 1</h2>
+
+                    <label for="search-1">
+                        Buscar Pokemon
+                    </label>
+
+                    <input
+                        type="text"
+                        id="search-1"
+                        placeholder="Ej: Pikachu"
+                        autocomplete="off"
+                    >
+
+                    <div id="suggestions-1" class="suggestions"></div>
+
+                    <div id="selected-1" class="selected-pokemon"></div>
+
+                </div>
+
+
+                <!-- Pokemon 2 -->
+                <div class="picker-card">
+
+                    <h2>Pokemon 2</h2>
+
+                    <label for="search-2">
+                        Buscar Pokemon
+                    </label>
+
+                    <input
+                        type="text"
+                        id="search-2"
+                        placeholder="Ej: Charizard"
+                        autocomplete="off"
+                    >
+
+                    <div id="suggestions-2" class="suggestions"></div>
+
+                    <div id="selected-2" class="selected-pokemon"></div>
+
+                </div>
+
+            </div>
+
+            <button id="start-battle-btn" disabled>
+                Comenzar batalla
+            </button>
+
+            <p id="picker-message"></p>
+
+        </section>
+
+
+        <!-- Pantalla de batalla-->
+
+        <section id="battle-screen" class="screen hidden">
+
+            <h1>Estadio Pokemon</h1>
+
+            <div class="battle-arena">
+
+                <!-- Pokemon 1 -->
+                <div class="battle-card" id="battle-card-1">
+
+                    <h2 id="battle-name-1"></h2>
+
+                    <img
+                        id="battle-sprite-1"
+                        src=""
+                        alt="Pokémon 1"
+                    >
+
+                    <div class="hp-section">
+
+                        <div class="hp-info">
+                            <span>HP</span>
+                            <span id="hp-text-1"></span>
+                        </div>
+
+                        <div class="hp-bar">
+                            <div id="hp-fill-1" class="hp-fill"></div>
+                        </div>
+
+                    </div>
+
+                    <div id="moves-1" class="moves"></div>
+
+                </div>
+
+
+                <!-- VS -->
+
+                <div class="vs">
+                    VS
+                </div>
+
+
+                <!-- Pokemon 2 -->
+                <div class="battle-card" id="battle-card-2">
+
+                    <h2 id="battle-name-2"></h2>
+
+                    <img
+                        id="battle-sprite-2"
+                        src=""
+                        alt="Pokémon 2"
+                    >
+
+                    <div class="hp-section">
+
+                        <div class="hp-info">
+                            <span>HP</span>
+                            <span id="hp-text-2"></span>
+                        </div>
+
+                        <div class="hp-bar">
+                            <div id="hp-fill-2" class="hp-fill"></div>
+                        </div>
+
+                    </div>
+
+                    <div id="moves-2" class="moves"></div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Resultado de batalla -->
+
+            <div id="battle-message" class="battle-message"></div>
+
+            <button id="play-again-btn">
+                Jugar otra vez
+            </button>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+
